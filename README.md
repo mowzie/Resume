@@ -64,15 +64,15 @@ Proof-of-concept class project to test if we can detect the location of emergenc
  * [link](https://github.com/mowzie/vehiclefinder)
 
 
- **fft**  
+**fft**  
     Simple application that reads in an audio file (in wav format) and outputs the fft amplitudes
- as well as generating a gnuplot script to plot the fft.  
- Written using **C** utilizing the **fftw** library.
- *  [link](https://github.com/mowzie/fft)
+as well as generating a gnuplot script to plot the fft.  
+Written using **C** utilizing the **fftw** library.
+*  [link](https://github.com/mowzie/fft)
 
 
- **Game of Life**  
-    Group project to create Conway's Game of Life.  
- Written in **C**, but currently only works on **Windows** due to library functions used.  
- For class at EDCC.
- * [link](https://github.com/mowzie/Game-of-Life)
+**Game of Life**  
+  Group project to create Conway's Game of Life.  
+Written in **C**, but currently only works on **Windows** due to library functions used.  
+For class at EDCC.
+* [link](https://github.com/mowzie/Game-of-Life)
