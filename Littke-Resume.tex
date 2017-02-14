@@ -27,7 +27,7 @@
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{amsmath}
 \nopagenumbers
-\usepackage[scale=0.90,foot=0cm,bmargin=1cm,tmargin=2cm]{geometry} % Reduce document margins
+\usepackage[scale=0.96,foot=0cm,bmargin=1.5cm,tmargin=1.5cm,rmargin=1cm,lmargin=1cm]{geometry} % Reduce document margins
 \newenvironment{myenv}[1]
   {\begin{spacing}{#1}}
   {\end{spacing}}
@@ -101,13 +101,15 @@
   \end{itemize}
 }
 
+
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
  \section{Languages and Technologies}
-\renewcommand{\tabcolsep}{5mm}
+
 \begin{center}
+  \renewcommand{\tabcolsep}{5mm}
 \begin{tabular}{ l |  c c c c}
 
   Proficient & Java & C & \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} \\ \cline{1-4}
@@ -142,24 +144,26 @@
 %    \cvlistitem{Provided excellent customer service while sharing coffee knowledge.}
 %}
 
-
+\par
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
- \section{Projects of Interest}
+\section{Projects of Interest}
 
- \cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
+
+
+\cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
  \begin{itemize}
    \item Simple \textsc{C} shell for Unix as class project.
-   \item Handles pipes, redirection, command/variable expansion, and simple script reading.
+   \item Handles pipes, redirection, command/variable expansion, and simple script reading
  \end{itemize}
- }
+}
 
  \cventry{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
  \begin{itemize}
    \item Experimental project \href{https://github.com/mowzie/vehiclefinder}{(github.com/mowzie/vehiclefinder)}
-   \item Implemented a cross-correlation algorithm in \textsc{C} to determine frequencies of interest.
+   \item Implemented a cross-correlation algorithm in \textsc{C} to determine frequencies of interest
  \end{itemize}
  }
 
@@ -169,6 +173,7 @@
    \item Interfaced with Xbox 360, Xbox One, Win10 devices, and a LUA gantry robot
  \end{itemize}
  }
+
  %----------------------------------------------------------------------------------------
  %	EDUCATION SECTION
  %----------------------------------------------------------------------------------------
