@@ -4,6 +4,7 @@ Ian Littke
 - **phone**: 206-659-6106
 - **email**: ian.littke@gmail.com
 - **github**: github.com/mowzie
+- **linkedin**: linkedin.com/in/littke
 
 Education
 ---------
