@@ -26,6 +26,7 @@
 \moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{amsmath}
+\definecolor{mygray}{gray}{.75}
 \nopagenumbers
 \usepackage[scale=0.96,foot=0cm,bmargin=1.5cm,tmargin=1.5cm,rmargin=1cm,lmargin=1cm]{geometry} % Reduce document margins
 \newenvironment{myenv}[1]
@@ -36,8 +37,8 @@
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
-\firstname{{\fontfamily{lmss}\selectfont Ian}} % Your first name
-\familyname{{\fontfamily{lmss}\selectfont Littke}} % Your last name
+\firstname{Ian} % Your first name
+\familyname{Littke} % Your last name
 
 
 % All information in this block is optional, comment out any lines you don't need
@@ -62,7 +63,35 @@
 
 \makecvtitle % Print the CV titleutalizing
 
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+% \section{Objective}
+% Seeking part-time to full-time summer employment that can be continued throughout the school year\\
+% that will utulize my customer service skills to serve the community of Bellingham.
 
+
+\section{Education}
+
+\cventry{2015--Dec 2017 (expected)}{Bachelors of Science: Computer Science}
+{Western Washington University}
+{Bellingham, WA}{GPA 3.19}{}
+
+\cventry{2014--2015}{Associate of Science: Mathematics}
+{Edmonds Community College}
+{Lynnwood, WA}{GPA 3.75}{}
+
+\cventry{2007--2009}{Associate of Applied Arts: Audio Production}
+{Art Institute of Seattle}
+{Seattle, WA}{GPA 3.0}{}
+{}
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+\cvitem{2015--present}{Washington State Opportunity Scholarship}
 
 
 %----------------------------------------------------------------------------------------
@@ -85,9 +114,9 @@
  \cventry{2012--2014}{Software Test Engineer II}{\textsc{Populus Group, LLC \textup{for} Microsoft}}{Redmond, WA}{}{
    Software and hardware test engineer for Xbox One and Kinect
    \begin{itemize}
-     \item Provided a fix for pre-alpha phase test data (~20,000 wav files) caused by bug
+     \item Fixed test data by rewriting wav headers for alpha phase test data, saving time and money
       \item Rewrote existing test infrastructure from batch script to
-      \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} reducing runtime while increasing received test data
+      \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} reducing runtime by 50\% while increasing received test data
     \item Created \textsc{.net} webpage with graphs to show detailed information on automated tests
    \end{itemize}
  }
@@ -111,10 +140,9 @@
 \begin{center}
   \renewcommand{\tabcolsep}{5mm}
 \begin{tabular}{ l |  c c c c}
-
-  Proficient & Java & C & \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} \\ \cline{1-4}
-  Beginning & SQL & Racket & JavaScript & Python\\ \hline
-  Tools  & Visual Studio & IntelliJ & gcc & git \\ \hline
+  Proficient & Java & C & \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} \\ \cline{2-4}
+  Beginning & SQL & Racket & JavaScript & Python\\ \cline{2-5}
+  Tools  & Visual Studio & IntelliJ & gcc & git \\ \cline{2-5}
     %       & Visual Studio & IntelliJ &  TFS / CVS / git\\
   Skills & Agile Methodologies & Testing & Automation & *nix, OS X, Windows \\
 \end{tabular}
@@ -144,18 +172,15 @@
 %    \cvlistitem{Provided excellent customer service while sharing coffee knowledge.}
 %}
 
-\par
 %----------------------------------------------------------------------------------------
 %	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Projects of Interest}
 
-
-
 \cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
  \begin{itemize}
-   \item Simple \textsc{C} shell for Unix as class project.
+   \item Simple \textbf{\textsc{C}} shell for Unix as class project.
    \item Handles pipes, redirection, command/variable expansion, and simple script reading
  \end{itemize}
 }
@@ -163,50 +188,16 @@
  \cventry{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
  \begin{itemize}
    \item Experimental project \href{https://github.com/mowzie/vehiclefinder}{(github.com/mowzie/vehiclefinder)}
-   \item Implemented a cross-correlation algorithm in \textsc{C} to determine frequencies of interest
+   \item Implemented a cross-correlation algorithm in \textbf{\textsc{C}} to determine frequencies of interest
  \end{itemize}
  }
 
  \cventry{2013-2015}{Recording Tool} {\textsc{Microsoft}}{}{}{
  \begin{itemize}
-   \item Designed, developed, documented, and maintained in-house \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} recording wrapper
-   \item Interfaced with Xbox 360, Xbox One, Win10 devices, and a LUA gantry robot
+   \item Designed, developed, documented, and maintained in-house \textbf{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}} recording tool
+   \item Interfaces with Xbox 360, Xbox One, Win10 devices, and a LUA-controlled gantry robot
  \end{itemize}
  }
-
- %----------------------------------------------------------------------------------------
- %	EDUCATION SECTION
- %----------------------------------------------------------------------------------------
- % \section{Objective}
- % Seeking part-time to full-time summer employment that can be continued throughout the school year\\
- % that will utulize my customer service skills to serve the community of Bellingham.
-
-
- \section{Education}
-
- \cventry{2015--Dec 2017 (expected)}{Bachelors of Science: Computer Science}
- {Western Washington University}
- {Bellingham, WA}{}{}
-
- \cventry{2014--2015}{Associate of Science: Mathematics}
- {Edmonds Community College}
- {Lynnwood, WA}{}{}
-
- \cventry{2007--2009}{Associate of Applied Arts: Audio Production}
- {Art Institute of Seattle}
- {Seattle, WA}{}{}
- {}
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Awards}
-
-\cvitem{2015--present}{Washington State Opportunity Scholarship}
-
-
-
-
 %----------------------------------------------------------------------------------------
 
 \end{document}
