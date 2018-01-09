@@ -22,7 +22,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt,letterpaper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,letterpaper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 \moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{amsmath}
@@ -34,6 +34,8 @@
   {\end{spacing}}
   \usepackage{setspace}
 
+  \newcommand{\csharp}{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
+
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
@@ -42,8 +44,8 @@
 
 
 % All information in this block is optional, comment out any lines you don't need
-\address{646 NW Columbia Dr}{Oak Harbor, WA 98277}
-\mobile{(206) 659 6106}
+%\address{646 NW Columbia Dr}{Oak Harbor, WA 98277}
+\mobile{(206) 659-6106}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
 \email{ian.littke@gmail.com}
@@ -63,36 +65,26 @@
 
 \makecvtitle % Print the CV titleutalizing
 
+\section{Summary}
+\small{Recent computer science graduate with experience in software development and testing with \textbf{C, \csharp} and \textbf{Java}.
+
+I am a quick learner that can easily adapt.}
+
+
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-% \section{Objective}
-% Seeking part-time to full-time summer employment that can be continued throughout the school year\\
-% that will utulize my customer service skills to serve the community of Bellingham.
-
-
-\section{Education}
-
-\cventry{2015--Dec 2017 (expected)}{Bachelors of Science: Computer Science}
-{Western Washington University}
-{Bellingham, WA}{GPA 3.28}{}
-
-\cventry{2014--2015}{Associate of Science: Mathematics}
-{Edmonds Community College}
-{Lynnwood, WA}{GPA 3.75}{}
-
-\cventry{2007--2009}{Associate of Applied Arts: Audio Production}
-{Art Institute of Seattle}
-{Seattle, WA}{GPA 3.0}{}
-{}
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
+%	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Awards}
-
-\cvitem{2015--present}{Washington State Opportunity Scholarship}
-
+ \section{Languages and Technologies}
+\begin{center}
+ \renewcommand{\tabcolsep}{3mm}
+\begin{tabular}{ l |  c c c c c}
+  \textbf{Languages} & C & \csharp & Java & Python & SQL \\ 
+%  Beginning & SQL & Racket & JavaScript & Python\\ 
+  \textbf{Technologies}     & git & Scikit-Learn & Tensorflow & WPF \\
+\textbf{Elective Courses} & Deep Learning & Device Drivers & Parallel Computation & Natural Language Processing \\
+\end{tabular}
+\end{center}
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
@@ -105,48 +97,25 @@
  \cventry{2010--2015}{Software Test Engineer}{\textsc{Populus Group, LLC \textup{for} Microsoft}}{Redmond, WA}{}{
    Software and hardware test engineer for Xbox
    \begin{itemize}
-     \item Created stop-gap solution for testing Cortana keyword spotter (Mobile \& PC)
-     \item Collected microphone/speaker data for statistical analysis on OEM laptops
+     \item Collected microphone/speaker data for statistical analysis on 
       \item Rewrote existing test infrastructure from batch script to
-        \textbf{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}} reducing runtime by 50\% while increasing received test data
+        \textbf{\csharp} reducing runtime by 50\% while increasing received test data
       \item Created \textbf{\textsc{.net}} webpage with graphs to show detailed information on automated tests
-    \item Created temporary solutions for daily accuracy testing
-    \item Developed and executed both manual and automated tests
-    \item Bi-Monthly SDK validation testing for team
+    \item Created tools for daily accuracy testing including Cortana/Xbox keyword spotter
    \end{itemize}
  }
 
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
- \section{Languages and Technologies}
-
-\begin{center}
-  \renewcommand{\tabcolsep}{5mm}
-\begin{tabular}{ l |  c c c c}
-  Proficient & Java & C & \textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}} \\ 
-  Beginning & SQL & Racket & JavaScript & Python\\ 
-    %       & Visual Studio & IntelliJ &  TFS / CVS / git\\
-  Skills & Agile Methodologies & Testing & Automation & *nix, OS X, Windows \\
-  Courses & Deep Learning & Device Drivers & Parallel Computation & Natural Language Processing \\
-\end{tabular}
-\end{center}
 %----------------------------------------------------------------------------------------
 %  UNRELATED WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-%\subsection{Other}
-%\cventry{2016--present}{Barista}{\textsc{Western Washington University}}{Bellingham, WA}{}{
+\subsection{Other}
+%\cventry{2016--2017}{Barista}{\textsc{Western Washington University}}{Bellingham, WA}{}{
 %   \cvlistitem{Provided ecellent customer service making drinks on campus.}
 %}
-%\cventry{2016--present}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
-%   \cvlistitem{Archival recording and digitizing analog recordings for the music department.}
-%}
+\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
+   \cvlistitem{Archival recording and digitizing analog recordings for the music department.}
+}
 %\cventry{2010--2011}{Live Sound Engineer}{\textsc{Q Cafe}}{Seattle, WA}{}{
 %  \cvlistitem{Part of the audio engineer rotation to run sound.}
 %  \cvlistitem{Responsible for band load in, mixing, and tear down.}
@@ -167,22 +136,29 @@
 
 \section{Projects of Interest}
 
+\cventry{2017}{Reinforcement Learning Project}{\textsc{Western Washington University}}{}{}{
+ \begin{itemize}
+   \item Group project to use machine learning models to teach a rigid-body simulation in Unity
+   \item Utilized ml-agents framework to tie Unity and \textbf{tensorflow}
+ \end{itemize}
+}
+
 \cventry{2017}{Flight Planner}{\textsc{Western Washington University}}{}{}{
  \begin{itemize}
-   \item Group project for the Whatcom Civil Air Patrol, written in  \textbf{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}.
-   \item Utilizes Google Maps API to create points in a map
-   \item List of waypoints can be exported to the Garmin G1000 autopilot
+   \item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
+   \item Allows CAP to easily create Garmin G1000 navigation files
+   \item Provided the majority of the front-end development
    \item Project information is stored at \href{https://github.com/CIOS-Digital/}{github.com/CIOS-Digital}
  \end{itemize}
 }
 
 
-\cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
- \begin{itemize}
-   \item Simple \textbf{\textsc{C}} shell for Unix as class project.
-   \item Handles pipes, redirection, command/variable expansion, and simple script reading
- \end{itemize}
-}
+%\cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
+% \begin{itemize}
+%   \item Simple \textbf{\textsc{C}} shell for Unix as class project
+%   \item Handles pipes, redirection, command/variable expansion, and simple script reading
+% \end{itemize}
+%}
 
  \cventry{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
  \begin{itemize}
@@ -193,10 +169,42 @@
 
  \cventry{2013-2015}{Recording Tool} {\textsc{Microsoft}}{}{}{
  \begin{itemize}
-   \item Designed, developed, documented, and maintained in-house \textbf{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}} recording tool
+   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
    \item Interfaces with Xbox 360, Xbox One, Win10 devices, and a LUA-controlled gantry robot
  \end{itemize}
  }
+
+ %----------------------------------------------------------------------------------------
+ %  EDUCATION SECTION
+ %----------------------------------------------------------------------------------------
+ % \section{Objective}
+ % Seeking part-time to full-time summer employment that can be continued throughout the school year\\
+ % that will utulize my customer service skills to serve the community of Bellingham.
+
+ \section{Education}
+
+ \cventry{2015--Dec 2017}{Bachelors of Science: Computer Science}
+ {Western Washington University}
+ {Bellingham, WA}{GPA 3.33}{}
+
+ \cventry{2014--2015}{Associate of Science: Mathematics}
+ {Edmonds Community College}
+ {Lynnwood, WA}{GPA 3.75}{}
+
+ \cventry{2007--2009}{Associate of Applied Arts: Audio Production}
+ {Art Institute of Seattle}
+ {Seattle, WA}{GPA 3.0}{}
+ {}
+ 
+ 
+ %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Awards}
+
+%\cvitem{2015--present}{Washington State Opportunity Scholarship}
+
 
 \end{document}
