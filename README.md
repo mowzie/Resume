@@ -20,7 +20,7 @@ Education
 
 Experience
 ----------
-*<datetime> 2018-Present <datetime>*
+*<datetime> 2018-Present <datetime>*  
 **Faithlife** - Software Developer: Faithlife Sites
 
 
