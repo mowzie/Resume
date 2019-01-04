@@ -9,7 +9,7 @@ Ian Littke
 Education
 ---------
 
-*2015-2017 Dec (expected)*  
+*2015-2017*  
    **BS, Computer Science**; Washington State University (Bellingham, WA)
 
 *2014-2015*  
@@ -20,9 +20,12 @@ Education
 
 Experience
 ----------
+*<datetime> 2018-Present <datetime>*
+**Faithlife** - Software Developer: Faithlife Sites
+
 
 *<datetime> 2014-2015 <datetime>*  
-**Populus Group, LLC for Microsoft** - STEIII  
+**Populus Group, LLC for Microsoft** - Software Test Engineer III  
 Software/Hardware test engineer for Cortana
 
 
