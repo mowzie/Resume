@@ -26,7 +26,7 @@
 \moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage{amsmath}
-\definecolor{mygray}{gray}{.75}
+\definecolor{mygray}{gray}{.8}
 \nopagenumbers
 \usepackage[scale=0.96,foot=0cm,bmargin=1.5cm,tmargin=1.5cm,rmargin=1cm,lmargin=1cm]{geometry} % Reduce document margins
 \newenvironment{myenv}[1]
@@ -48,10 +48,10 @@
 \mobile{(206) 659-6106}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
-\email{ian.littke@gmail.com}
+
 \social[github][github.com/mowzie]{github/mowzie}
 \social[linkedin][www.linkedin.com/in/littke]{linkedin/in/littke}
-%\epage{www.github.com/mowzie}{}
+ \email{ian.littke@gmail.com}
 % The first argument is the url for the clickable link,
 %the second argument is the url displayed in the template -
 %this allows special characters to be displayed such as the tilde in this example
@@ -65,47 +65,30 @@
 
 \makecvtitle % Print the CV titleutalizing
 
-\section{Summary}
-\small{Recent computer science graduate with experience in software development and testing with \textbf{C, \csharp} and \textbf{Java}.
-
-Quick learner that can easily adapt, excellent work ethic, and strives in both team collaboration and independent work.}
+%\section{Summary}
+%\small{Recent computer science graduate with experience in software development and testing with \textbf{C, \csharp} and \textbf{Java}.
+%
+%Quick learner that can easily adapt, excellent work ethic, and strives in both team collaboration and independent work.}
 
 %----------------------------------------------------------------------------------------
  %  EDUCATION SECTION
  %----------------------------------------------------------------------------------------
- % \section{Objective}
- % Seeking part-time to full-time summer employment that can be continued throughout the school year\\
- % that will utulize my customer service skills to serve the community of Bellingham.
-
  \section{Education}
 
- \cventry{2015--Dec 2017}{Bachelors of Science: Computer Science}
+ \cventry{Sep 2015 -- Dec 2017}{Bachelors of Science: Computer Science}
  {Western Washington University}
- {Bellingham, WA}{GPA 3.33}{}
+ {Bellingham, WA}{}{}
 
- \cventry{2014--2015}{Associate of Science: Mathematics}
+ \cventry{Jan 2014 -- Jul 2015}{Associate of Science: Mathematics}
  {Edmonds Community College}
- {Lynnwood, WA}{GPA 3.75}{}
+ {Lynnwood, WA}{}{}
 
- \cventry{2007--2009}{Associate of Applied Arts: Audio Production}
+ \cventry{Sep 2007 -- Mar 2009}{Associate of Applied Arts: Audio Production}
  {Art Institute of Seattle}
- {Seattle, WA}{GPA 3.0}{}
+ {Seattle, WA}{}{}
  {}
 
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
 
- \section{Languages and Technologies}
-\begin{center}
- \renewcommand{\tabcolsep}{3mm}
-\begin{tabular}{ l |  c c c c c}
-  \textbf{Languages} & C & \csharp & Java & Python & SQL \\
-%  Beginning & SQL & Racket & JavaScript & Python\\
-  \textbf{Technologies}     & git & Scikit-Learn & Tensorflow & WPF \\
-\textbf{Elective Courses} & Deep Learning & Device Drivers & Parallel Computation & Natural Language Processing \\
-\end{tabular}
-\end{center}
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
@@ -115,28 +98,66 @@ Quick learner that can easily adapt, excellent work ethic, and strives in both t
 \renewcommand{\labelitemi}{-}
 %------------------------------------------------
 
- \cventry{2010--2015}{Software Test Engineer}{\textsc{Populus Group, LLC \textup{for} Microsoft}}{Redmond, WA}{}{
-   Software and hardware test engineer for Xbox
+ \cventry[1em]{2018--2020}{Full Stack Software Developer}{\textsc{Faithlife}}{Bellingham, WA}{}{   
    \begin{itemize}
-     \item Collected microphone/speaker data for statistical analysis on a myriad of devices including laptops, all-in-ones, and accessories
-      \item Rewrote existing test infrastructure from batch script to
-        \textbf{\csharp} reducing runtime by 50\% while increasing received test data
-      \item Created \textbf{\textsc{.net}} webpage with graphs to show detailed information on automated tests
-    \item Created tools for daily accuracy testing including Cortana/Xbox keyword spotter
+     \item Developed new web features using \textbf{\csharp} and \textbf{React} and \textbf{MVC WebForms}
+     \item Created and maintained new API routes as well as updating old routes
+     \item Refactored legacy code for internal tools to utilize API routes instead of straight database calls
+     \begin{itemize}
+	     \item One project decreased page load time by 20x by selectivly caching and fetching data
+     \end{itemize}
    \end{itemize}
  }
+ 
+\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
+   \cvlistitem{Archival recording and digitizing analog recordings for the music department}
+   }
+
+ \cventry[1em]{2010--2015}{Software Test Engineer (I, II, III)}{\textsc{Populus Group, LLC \textup{for} Microsoft}}{Redmond, WA}{}{
+   \begin{itemize}
+     \item Collected microphone/speaker data for statistical analysis on a myriad of OEM devices including laptops, mobile devices, all-in-ones, and accessories to ensure they were Cortana ready as well as modeling the device for automated synthetic testing
+   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
+        \begin{itemize}
+   \item Interfaced with Xbox 360, Xbox One, Win10 devices, and a \textbf{Lua}-controlled gantry robot
+     \end{itemize}
+      \item Rewrote nightly audio test infrastructure from batch script to \textbf{\csharp} reducing runtime by 50\% while increasing test data 3x
+      \item Created a \textbf{\textsc{.net}} webpage with Excel pivot tables to show detailed information on automated tests
+    \item Implemented other tools for daily accuracy testing including Cortana/Xbox keyword spotter
+   \end{itemize}
+ }
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+ \section{Technical Skills}
+ 
+
+\begin{center}
+ \renewcommand{\tabcolsep}{2mm}
+ \begin{tabular}{l |c c c c c}
+  \textbf{Languages} & \csharp & Javascript & Python & (MS|MY) SQL \\
+%  Beginning & SQL & Racket & JavaScript & Python\\
+  \textbf{Frameworks}     & React & MCV WebForms & Tensorflow & WPF \\
+  \textbf{Other Interests} & Deep Learning & 
+  NLP & Recording \&  Mixing music \\
+\end{tabular}
+
+
+%\end{tabular}
+\end{center}
 
 %----------------------------------------------------------------------------------------
 %  UNRELATED WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\subsection{Other}
+%\subsection{Other}
 %\cventry{2016--2017}{Barista}{\textsc{Western Washington University}}{Bellingham, WA}{}{
 %   \cvlistitem{Provided ecellent customer service making drinks on campus.}
 %}
-\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
-   \cvlistitem{Archival recording and digitizing analog recordings for the music department.}
-}
+%\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
+%   \cvlistitem{Archival recording and digitizing analog recordings for %the music department.}
+%}
 %\cventry{2010--2011}{Live Sound Engineer}{\textsc{Q Cafe}}{Seattle, WA}{}{
 %  \cvlistitem{Part of the audio engineer rotation to run sound.}
 %  \cvlistitem{Responsible for band load in, mixing, and tear down.}
@@ -157,14 +178,14 @@ Quick learner that can easily adapt, excellent work ethic, and strives in both t
 
 \section{Projects of Interest}
 
-\cventry{2017}{Reinforcement Learning Project}{\textsc{Western Washington University}}{}{}{
+\cventry[1em]{2017}{Reinforcement Learning Project}{\textsc{Western Washington University}}{}{}{
  \begin{itemize}
    \item Group project to use machine learning models to teach a rigid-body simulation in Unity
-   \item Utilized ml-agents framework to tie Unity and \textbf{tensorflow}
+   \item Utilized \textbf{ml-agents} framework to tie Unity with \textbf{tensorflow}
  \end{itemize}
 }
 
-\cventry{2017}{Flight Planner}{\textsc{Western Washington University}}{}{}{
+\cventry[1em]{2017}{Flight Planner}{\textsc{Western Washington University}}{}{}{
  \begin{itemize}
    \item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
    \item Allows CAP to easily create Garmin G1000 navigation files
@@ -180,20 +201,20 @@ Quick learner that can easily adapt, excellent work ethic, and strives in both t
 %   \item Handles pipes, redirection, command/variable expansion, and simple script reading
 % \end{itemize}
 %}
-
- \cventry{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
- \begin{itemize}
-   \item Experimental project \href{https://github.com/mowzie/vehiclefinder}{(github.com/mowzie/vehiclefinder)}
-   \item Implemented a cross-correlation algorithm in \textbf{\textsc{C}} to determine frequencies of interest
- \end{itemize}
- }
-
- \cventry{2013-2015}{Recording Tool} {\textsc{Microsoft}}{}{}{
- \begin{itemize}
-   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
-   \item Interfaces with Xbox 360, Xbox One, Win10 devices, and a LUA-controlled gantry robot
- \end{itemize}
- }
+%
+%\cventry{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
+% \begin{itemize}
+%   \item Experimental project \href{https://github.com/mowzie/vehiclefinder}{(github.com/mowzie/vehiclefinder)}
+%   \item Implemented a cross-correlation algorithm in \textbf{\textsc{C}} to determine frequencies of interest
+% \end{itemize}
+% }
+%
+%\cventry{2013-2015}{Recording Tool} {\textsc{Microsoft}}{}{}{
+% \begin{itemize}
+%   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
+%   \item Interfaces with Xbox 360, Xbox One, Win10 devices, and a LUA-controlled gantry robot
+% \end{itemize}
+% }
 
  %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------

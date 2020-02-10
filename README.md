@@ -20,15 +20,19 @@ Education
 
 Experience
 ----------
-*<datetime> 2018-Present <datetime>*  
-**Faithlife** - Software Developer: Faithlife Sites
+*<datetime> 2018-2020 <datetime>*  
+**Faithlife** - Software Developer: Faithlife
+
+* Full-stack developer on Sites project (a web page maker).
+   * Developed various features in *React* that called other teams APIs in *C#*.
+* Back-end developer on Platform Team.
+   * Refactored legacy code for internal tools to use API routes
+   * Performed updates and speedups for several pages - such as decreasing a page load time by 20x by selectivly fetching data through API.
 
 
 *<datetime> 2014-2015 <datetime>*  
 **Populus Group, LLC for Microsoft** - Software Test Engineer III  
 Software/Hardware test engineer for Cortana
-
-
 * Collected microphone/speaker data for statistical analysis on OEM devices
 * Created stop-gap solutions for testing Cortana keyword spotter (mobile and PC)
 
@@ -48,6 +52,12 @@ Software/Hardware test engineer for Xbox 360 Kinect
 
 Projects of Interest
 --------------------
+**Flight Planner**  
+Group final project, comissioned by the Whatcom Civil Air Patrol.
+Written in **C#** using WPF.
+Allows CAP to easily create Garmin G1000 waypoint navigation files.
+* [link](https://github.com/CIOS-Digital)
+
 
 **Minishell**  
    A simple shell for **Unix** written in **C**.  
