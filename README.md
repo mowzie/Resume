@@ -23,11 +23,11 @@ Experience
 *<datetime> 2018-2020 <datetime>*  
 **Faithlife** - Software Developer: Faithlife
 
-* Full-stack developer on Sites project (a web page maker).
-   * Developed various features in *React* that called other teams APIs in *C#*.
-* Back-end developer on Platform Team.
-   * Refactored legacy code for internal tools to use API routes
-   * Performed updates and speedups for several pages - such as decreasing a page load time by 20x by selectivly fetching data through API.
+* Developed new web features using **C#** and **React** and **MVC WebForms**
+* Created and maintained new RESTful API routes as well as updating old routes
+* Incorporated new tests in **NUnit** as API routes were created/updated
+* Refactored legacy code for internal tools to use API routes
+* Performed updates and speedups for several pages - such as decreasing a page load time by 20x by selectivly fetching data through API.
 
 
 *<datetime> 2014-2015 <datetime>*  
@@ -52,12 +52,16 @@ Software/Hardware test engineer for Xbox 360 Kinect
 
 Projects of Interest
 --------------------
+**BoxTop Software**
+Side project to modernize ecommerce website.
+Backend written using **python flask** with frontend utilizing **Jinja** templates.
+* [link](http://boxtopsoft.com/)
+
 **Flight Planner**  
 Group final project, comissioned by the Whatcom Civil Air Patrol.
-Written in **C#** using WPF.
+Written in **C#** using **WPF**.
 Allows CAP to easily create Garmin G1000 waypoint navigation files.
 * [link](https://github.com/CIOS-Digital)
-
 
 **Minishell**  
    A simple shell for **Unix** written in **C**.  
@@ -69,7 +73,6 @@ Written for class at WWU.
 Tool written in **C#** to facilitate in manual and automated data collection.  
 Connects to Xbox 360, Xbox One, Win-Mobile, and Win10 devices to initiate playback & recording of audio.  Also controls a gantry robot through **Lua** to move the robot-controlled loudspeaker around the room at pre-coordinated positions.  Utilized internal tools for all connections.  
 Written for Microsoft.
-
 * No source available
 
 **Vechicle Finder**  
@@ -83,10 +86,3 @@ Proof-of-concept class project to test if we can detect the location of emergenc
 as well as generating a gnuplot script to plot the fft.  
 Written using **C** utilizing the **fftw** library.
 *  [link](https://github.com/mowzie/fft)
-
-
-**Game of Life**  
-  Group project to create Conway's Game of Life.  
-Written in **C**, but currently only works on **Windows** due to library functions used.  
-For class at EDCC.
-* [link](https://github.com/mowzie/Game-of-Life)
