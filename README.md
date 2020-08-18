@@ -57,6 +57,11 @@ Side project to modernize ecommerce website.
 Backend written using **python flask** with frontend utilizing **Jinja** templates.
 * [link](http://boxtopsoft.com/)
 
+**Destiny Clan Checker**
+Simple bot to check status of currently playing members.
+More features planned and incoming.
+* [link](https://github.com/mowzie/discordBots/tree/master/clanOn)
+
 **Flight Planner**  
 Group final project, comissioned by the Whatcom Civil Air Patrol.
 Written in **C#** using **WPF**.
