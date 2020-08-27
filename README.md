@@ -29,11 +29,11 @@ Experience
 * Refactored legacy code for internal tools to use API routes
 * Performed updates and speedups for several pages - such as decreasing a page load time by 20x by selectivly fetching data through API.
 
-*<datetime> 2016-2018 <datetime>*
+*<datetime> 2016-2018 <datetime>*  
 **Western Washington University** - Audio Archivist for Music Department
 * Responsible for preparing quality recordings for student recitals and performances
 
-*<datetime> 2016 <datetime>*
+*<datetime> 2016 <datetime>*  
 **Western Washington University** - Barista
 * Great customer service while bonding with customers and coworkers
 * Accurate cash handling and drink creating
@@ -57,14 +57,14 @@ Software/Hardware test engineer for Xbox 360 Kinect
 * Bi-Monthly SDK validation testing
 * Created and ran both manual and automated tests and data collection
 
-*<datetime> 2008-2010 <datetime>*
+*<datetime> 2008-2010 <datetime>*  
 **Starbucks** - Barista
 * Performed opening and closing duties and additional side-work
 * Enrolled in the *Coffee Master* program (before it became defunct)
 * Provided assistance to customers in effective and efficient manner
 * Accurate cash handling and superb drink making
 
-*<datetime> 2009 <datetime>*
+*<datetime> 2009 <datetime>*  
 **Clatter & Din** - Client Relations Intern
 * Ensured studios were clean and arranged before/after sessions
 * Assisted engineers in ISDN patching with clients
