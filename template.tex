@@ -1,0 +1,287 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+% * esben
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	letterpaper,
+	% a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	itemtextcolor=charcoal,
+	titletextcolor=arsenic,
+	%itemtextcolor=black!20,
+	%titletextcolor=black!40,
+	sidebarwidth=0.29\paperwidth,
+	topbottommargin=0.05\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+	% logowidth=4.5cm,
+	% logospace=5mm,
+	% logoposition=before,
+	% sidebarplacement=right,
+]{clsFiles/fortysecondscv}
+
+
+% fine tune line spacing
+% \usepackage{setspace}
+% \setstretch{1.1}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+ \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	% \newfontfamily\headingfont[Path=fonts/]{segoeuib.ttf} % use local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+\fi
+
+% use a sans serif font as default
+\usepackage[sfdefault]{ClearSans}
+ %\usepackage[sfdefault]{noto}
+
+% multi-language CV XeLaTeX and polyglossia (should also work with LuaLaTeX)
+% NOTE: breaks \pointskill, \membership and some spacings
+% \ifxetexorluatex
+% 	\usepackage{polyglossia}
+% 	\newfontfamily\arabicfontsf[Script=Arabic,Scale=1.5]{Amiri}
+% 	\newfontfamily\englishfontsf{Clear Sans}
+% 	\setmainfont{Amiri}
+% 	\setdefaultlanguage{arabic}
+% 	\setotherlanguage{english}
+% \fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+\usepackage{enumitem}
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+\newcommand{\csharp}{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
+\newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.35ex}{\smaller{\smaller\textbf{+}}}}
+\newcommand{\Cpp}{\mbox{C\Rplus\Rplus}\xspace}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Ian Littke}
+% job title/career
+\cvjobtitle{Software Developer}
+
+%% optional information
+% profile picture
+% \cvprofilepic{pics/profile.png}
+% logo picture
+% \cvlogopic{pics/logo_txt.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+%\cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Bellingham, Washington}
+% phone number
+\cvphone{(206)-659-6106}
+% personal website
+% \cvsite{https://pandascience.net}
+% email address
+\cvmail{ian.littke@gmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+%\cvcustomdata{\faFlag}{USA}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	%\graphicspath{{pics/flags/shiny/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Social Network}
+		\begin{icontable}{1.5em}{1em}
+			\social{\faLinkedin}
+				{https://linkedin.com/in/littke/}
+				{linkedin.com/in/littke/}
+			\social{\faGithub}
+				{https://github.com/mowzie}
+				{github.com/mowzie}
+			\social{\faSave}
+				{https://github.com/mowzie/Resume}{github.com/mowzie/Resume}
+		\end{icontable}
+
+	\profilesection{Languages}
+		\skill{\faWindows}{\csharp}
+		\skill{\faJs}{JavaScript}
+	\skill{\faPython}{Python}
+	\skill{\faDatabase}{MYSQL}
+
+	\profilesection{Frameworks}
+		\skill{\faJs}{ReactJS}
+		\skill{\faWindows}{MCV WebForms}
+		\skill{\faWindows}{WPF}
+		\skill{\faBezierCurve}{TensorFlow}
+
+	\profilesection{Other Interests}
+		\skill{\faMendeley}{Deep Learning}
+		\skill{\faLanguage}{NLP}
+		\skill{\faHeadphones}{Recording \& Mixing Music}
+
+	\profilesection{Soft Skills}
+		\skill{\faCodeBranch}{Adaptable \& Flexible}
+		\skill{\faCoffee}{Fast Learner}
+		\skill{\faHotjar}{Troubleshooting}
+		\skill{\faComment}{Friendly \& Empathetic}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+\renewcommand{\labelitemi}{\small\textbullet}
+\cvsection{Working Experience}
+\begin{cvtable}[2]
+	\cvitem{2018-2020}{Software Developer}{Faithlife}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Developed new features using \textbf{\csharp}, \textbf{React}, and \textbf{MVC WebForms}
+			\item Created new and updated old \textbf{RESTful} \textbf{API routes}
+			\item Worked in new and legacy codebases
+			\item Feature and unit tests in \textbf{NUnit}
+		\end{itemize}
+	}
+
+	\cvitem{2010 -- 2015}{Software Test Engineer I, II, III}{Populus Group, LLC \textup{for} Microsoft}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Manual and automated testing for Xbox Kinect
+			\item  Created in-house \textbf{\csharp} recording tool
+			\item Rewrote nightly tests in \textbf{\csharp}
+			\item Documented results in \textbf{Pivot Table} \textsc{.net}
+		\end{itemize}
+	}
+\end{cvtable}
+
+
+\cvsection{Education}
+%\cvsubsection{Postgraduate Training}
+\begin{cvtable}[1.5]
+	\cvitem{2015 -- 2017}{Bachelor of Science: Computer Science}{Western Washington University}{ }
+	\cvitem{2014 -- 2015}{Associate of Science: Math Focus}{Edmonds Community College}{ }
+	\cvitem{2007 -- 2009}{Associate of Applied Arts: Audio Production}{Art Institute of Seattle}{ }
+\end{cvtable}
+
+\cvsection{Projects}
+%\cvsubsection{Multi-line with longer description}
+\begin{cvtable}
+	\cvitem{Current}{Website Rewrite}{\href{http://boxtopsoft.com}{http://boxtopsoft.com}}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Modernizing a website from static pages to dynamic html.
+			\item \textbf{Python Flask} back-end with simple \textbf{JavaScript} and \textbf{Jinja} front-end
+			\item Hosted by \textbf{AWS}
+		\end{itemize}
+	%\item Hosted in \textbf{AWS}
+	}
+	\\
+	\cvitem{Current}{Destiny Discord Bot}{Personal}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Simple Discord bot utilizing Bungie.net \textbf{APIs}
+			\item Lists online clan memembers, groups by fireteams, shows current activity
+			\item \textbf{JavaScript} and hosted by \textbf{AWS}
+			\item Source: \href{https://github.com/mowzie/destinyClanDiscordBot}{github.com/mowzie/destinyClanDiscordBot}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2017}{Flight Planner}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
+			\item Allows CAP to easily create Garmin G1000 navigation files
+			\item Source: \href{https://github.com/CIOS-Digital/}{github.com/CIOS-Digital}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2017}{Reinforcement Learning Project}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Group project to use machine learning models to teach a rigid-body simulation in Unity
+   			\item Utilized \href{https://github.com/Unity-Technologies/ml-agents}{\textbf{ML-Agents}} framework to tie Unity with \textbf{TensorFlow}
+		\end{itemize}
+		}
+		\\
+	\cvitem{2017}{Device Driver}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Device driver for an external audio interface
+			\item Written for both NetBSD (\textbf{C}) and Windows 10 (\textbf{C\texttt{++}})
+			\item Source:  \href{https://github.com/mowzie/dasDriver}{github.com/mowzie/dasDriver}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2010 -- 2015}{Recording Tool}{Microsoft}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item \textbf{WPF} \textbf{\csharp} app to assist in manual and automated recordings
+			\item Controls a \textbf{LUA} gantry robot for audio playback while Win10 device is set to record
+		\end{itemize}
+	}
+\end{cvtable}
+
+\end{document}
