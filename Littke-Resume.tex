@@ -1,245 +1,290 @@
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
 %
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+% * esben
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same
-% directory as this .tex file. These files provide the resume style and themes
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-\documentclass[11pt,letterpaper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-\usepackage{amsmath}
-\definecolor{mygray}{gray}{.8}
-\nopagenumbers
-\usepackage[scale=0.96,foot=0cm,bmargin=1.5cm,tmargin=1.5cm,rmargin=1cm,lmargin=1cm]{geometry} % Reduce document margins
-\newenvironment{myenv}[1]
-  {\begin{spacing}{#1}}
-  {\end{spacing}}
-  \usepackage{setspace}
-
-  \newcommand{\csharp}{\textsc{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-\firstname{Ian} % Your first name
-\familyname{Littke} % Your last name
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
 
 
-% All information in this block is optional, comment out any lines you don't need
-%\address{646 NW Columbia Dr}{Oak Harbor, WA 98277}
-\mobile{(206) 659-6106}
-%\phone{(000) 111 1112}
-%\fax{(000) 111 1113}
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	letterpaper,
+	% a4paper,
+	% showframes,
+	% vline=2.2em,
+	% maincolor=cvgreen,
+	% sidecolor=gray!50,
+	% sectioncolor=red,
+	% subsectioncolor=orange,
+	itemtextcolor=charcoal,
+	titletextcolor=arsenic,
+	%itemtextcolor=black!20,
+	%titletextcolor=black!40,
+	sidebarwidth=0.29\paperwidth,
+	topbottommargin=0.05\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	% profilepicborderwidth=3.5pt,
+	% profilepicstyle=profilecircle,
+	% profilepiczoom=1.0,
+	% profilepicxshift=0mm,
+	% profilepicyshift=0mm,
+	% profilepicrounding=1.0cm,
+	% logowidth=4.5cm,
+	% logospace=5mm,
+	% logoposition=before,
+	% sidebarplacement=right,
+]{clsFiles/fortysecondscv}
 
-\social[github][github.com/mowzie]{github/mowzie}
-\social[linkedin][www.linkedin.com/in/littke]{linkedin/in/littke}
- \email{ian.littke@gmail.com}
-% The first argument is the url for the clickable link,
-%the second argument is the url displayed in the template -
-%this allows special characters to be displayed such as the tilde in this example
 
-%\extrainfo{additional information}
-%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-%\quote{"A witty and playful quotation" - John Smith}
-%----------------------------------------------------------------------------------------
+% fine tune line spacing
+% \usepackage{setspace}
+% \setstretch{1.1}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+ \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	% \newfontfamily\headingfont[Path=fonts/]{segoeuib.ttf} % use local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+\fi
+
+% use a sans serif font as default
+\usepackage[sfdefault]{ClearSans}
+ %\usepackage[sfdefault]{noto}
+
+% multi-language CV XeLaTeX and polyglossia (should also work with LuaLaTeX)
+% NOTE: breaks \pointskill, \membership and some spacings
+% \ifxetexorluatex
+% 	\usepackage{polyglossia}
+% 	\newfontfamily\arabicfontsf[Script=Arabic,Scale=1.5]{Amiri}
+% 	\newfontfamily\englishfontsf{Clear Sans}
+% 	\setmainfont{Amiri}
+% 	\setdefaultlanguage{arabic}
+% 	\setotherlanguage{english}
+% \fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+\usepackage{enumitem}
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+\newcommand{\csharp}{\small{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\#}}}}
+\newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.35ex}{\smaller{\smaller\textbf{+}}}}
+\newcommand{\Cpp}{\mbox{C\Rplus\Rplus}\xspace}
+
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Ian Littke}
+% job title/career
+\cvjobtitle{Software Developer}
+
+%% optional information
+% profile picture
+% \cvprofilepic{pics/profile.png}
+% logo picture
+% \cvlogopic{pics/logo_txt.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% date of birth
+%\cvbirthday{\today}
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Bellingham, Washington}
+% phone number
+\cvphone{(206) 659-6106}
+% personal website
+% \cvsite{https://pandascience.net}
+% email address
+\cvmail{ian.littke@gmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% any other custom entry
+%\cvcustomdata{\faFlag}{USA}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+	% include gosquare national flags from https://github.com/gosquared/flags;
+	% naming according to ISO 3166-1 alpha-2 country codes
+	%\graphicspath{{pics/flags/shiny/}}
+
+	% social network accounts incl. proper hyperlinks
+	\profilesection{Social Network}
+		\begin{icontable}{1.5em}{1em}
+			\social{\faLinkedin}
+				{https://linkedin.com/in/littke}
+				{linkedin.com/in/littke}
+			\social{\faGithub}
+				{https://github.com/mowzie}
+				{github.com/mowzie}
+			\social{\faSave}
+				{https://github.com/mowzie/Resume}{github.com/mowzie/Resume}
+		\end{icontable}
+
+	\profilesection{Languages}
+		\skill{\faWindows}{\csharp}
+		\skill{\faJs}{JavaScript}
+	\skill{\faPython}{Python}
+	\skill{\faDatabase}{MYSQL}
+
+	\profilesection{Frameworks}
+		\skill{\faJs}{ReactJS}
+		\skill{\faWindows}{MCV WebForms}
+		\skill{\faWindows}{WPF}
+		\skill{\faBezierCurve}{TensorFlow}
+
+	\profilesection{Other Interests}
+		\skill{\faMendeley}{Deep Learning}
+		\skill{\faLanguage}{NLP}
+		\skill{\faHeadphones}{Recording \& Mixing Music}
+
+	\profilesection{Soft Skills}
+		\skill{\faCodeBranch}{Adaptable \& Flexible}
+		\skill{\faCoffee}{Fast Learner}
+		\skill{\faHotjar}{Troubleshooting}
+		\skill{\faComment}{Friendly \& Empathetic}
+}
+
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
 \begin{document}
 
-\makecvtitle % Print the CV titleutalizing
+\makefrontsidebar
+\renewcommand{\labelitemi}{\small\textbullet}
+\renewcommand{\labelitemii}{\small\textbullet}
+\cvsection{Working Experience}
+\begin{cvtable}[2]
+	\cvitem{2018-2020}{Software Developer}{Faithlife}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Developed new features using \textbf{\csharp}, \textbf{React}, and \textbf{MVC WebForms}
+			\item Created new and updated old \textbf{RESTful} \textbf{API routes}
+			\item Worked in new and legacy codebases
+			\item Feature and unit tests in \textbf{NUnit}
+		\end{itemize}
+	}
 
-%\section{Summary}
-%\small{Recent computer science graduate with experience in software development and testing with \textbf{C, \csharp} and \textbf{Java}.
-%
-%Quick learner that can easily adapt, excellent work ethic, and strives in both team collaboration and independent work.}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Work Experience}
-
-\renewcommand{\labelitemi}{-}
-%------------------------------------------------
-
- \cventry[1em]{2018--2020}{Full Stack Software Developer}{\textsc{Faithlife}}{Bellingham, WA}{}{   
-   \begin{itemize}
-     \item Developed new web features using \textbf{\csharp} and \textbf{React} and \textbf{MVC WebForms}
-     \item Created and maintained new RESTful API routes as well as updating old routes
-     \item Incorporated new tests as API routes were created/updated
-     \item Refactored legacy code for internal tools to utilize API routes instead of straight database calls
-     \begin{itemize}
-	     \item One project decreased page load time by 20x by selectivly caching and fetching data
-     \end{itemize}
-   \end{itemize}
- }
- 
-%\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
-%   \cvlistitem{Archival recording and digitizing analog recordings for the music department}
-%   }
-
- \cventry[1em]{2010--2015}{Software Test Engineer (I, II, III)}{\textsc{Populus Group, LLC \textup{for} Microsoft}}{Redmond, WA}{}{
-   \begin{itemize}
-     \item Collected microphone/speaker data for statistical analysis on a myriad of OEM devices including laptops, mobile devices, all-in-ones, and accessories to ensure they were Cortana ready as well as modeling the device for automated synthetic testing
-   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
-        \begin{itemize}
-   \item Interfaced with Xbox 360, Xbox One, Win10 devices, and a \textbf{Lua}-controlled gantry robot
-     \end{itemize}
-      \item Rewrote nightly audio test infrastructure from batch script to \textbf{\csharp}, reducing runtime by 50\% while increasing test data 3x
-      \item Created a \textbf{\textsc{.net}} webpage with Excel pivot tables to show detailed information on automated tests
-    \item Implemented other tools for daily accuracy testing including Cortana/Xbox keyword spotter
-   \end{itemize}
- }
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
- \section{Technical Skills}
- 
-
-\begin{center}
- \renewcommand{\tabcolsep}{2mm}
- \begin{tabular}{l |c c c c c}
-  \textbf{Languages} & \csharp & Javascript & Python & (MS|MY) SQL \\
-%  Beginning & SQL & Racket & JavaScript & Python\\
-  \textbf{Frameworks}     & React & MCV WebForms & Tensorflow & WPF \\
-  \textbf{Other Interests} & Deep Learning & 
-  NLP & Recording \&  Mixing music \\
-\end{tabular}
+	\cvitem{2010 -- 2015}{Software Test Engineer I, II, III}{Populus Group, LLC \textup{for} Microsoft}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Manual and automated testing for Xbox Kinect
+			\item Created in-house \textbf{\csharp} recording tool used by team
+			\item Rewrote nightly tests in \textbf{\csharp}
+			\begin{itemize}[nosep, left=2pt]
+			\item Documented results in a \textbf{\footnotesize{.NET}} webpage with \textbf{Excel Pivot Tables}
+			\end{itemize}
+		\end{itemize}
+	}
+\end{cvtable}
 
 
-%\end{tabular}
-\end{center}
+\cvsection{Education}
+%\cvsubsection{Postgraduate Training}
+\begin{cvtable}[1.5]
+	\cvitem{2015 -- 2017}{Bachelor of Science: Computer Science}{Western Washington University}{ }
+	\cvitem{2014 -- 2015}{Associate of Science: Math Focus}{Edmonds Community College}{ }
+	\cvitem{2007 -- 2009}{Associate of Applied Arts: Audio Production}{Art Institute of Seattle}{ }
+\end{cvtable}
 
-%----------------------------------------------------------------------------------------
- %  EDUCATION SECTION
- %----------------------------------------------------------------------------------------
- \section{Education}
-
- \cventry[0em]{2015 -- 2017}{Bachelors of Science: Computer Science}
- {Western Washington University}
- {Bellingham, WA}{}{}
-
- \cventry[0em]{2014 -- 2015}{Associate of Science: Mathematics focus}
- {Edmonds Community College}
- {Lynnwood, WA}{}{}
-
- \cventry[0em]{2007 -- 2009}{Associate of Applied Arts: Audio Production}
- {Art Institute of Seattle}
- {Seattle, WA}{}{}
- {}
-
-
-%----------------------------------------------------------------------------------------
-%  UNRELATED WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-%\subsection{Other}
-%\cventry{2016--2017}{Barista}{\textsc{Western Washington University}}{Bellingham, WA}{}{
-%   \cvlistitem{Provided ecellent customer service making drinks on campus.}
-%}
-%\cventry{2016--2017}{Audio Recordist}{\textsc{Western Washington University}}{Bellingham, WA}{}{
-%   \cvlistitem{Archival recording and digitizing analog recordings for %the music department.}
-%}
-%\cventry{2010--2011}{Live Sound Engineer}{\textsc{Q Cafe}}{Seattle, WA}{}{
-%  \cvlistitem{Part of the audio engineer rotation to run sound.}
-%  \cvlistitem{Responsible for band load in, mixing, and tear down.}
-%  \cvlistitem{Ran sound for several "Battle of the Bands" style concerts.}
-%}
-%\cventry{2009}{Production House Intern}{\textsc{Clatter \& Din}}{Seattle, WA}{}{
-%    \cvlistitem{Assisted house engineers with studio preparation, ISDN patching, equipment maintenance,
-%    }
-%    \cvlistitem{Greeted and facilitated in client needs (drinks, lunch, etc)}
-%}
-%\cventry{2008--2010}{Barista}{\textsc{Starbucks}}{Seattle, WA}{}{
-%    \cvlistitem{Provided excellent customer service while sharing coffee knowledge.}
-%}
-
-%----------------------------------------------------------------------------------------
-%	PROJECTS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Projects of Interest}
-
-\cventry[0.7em]{Present}{Website Rewrite}{\textsc{\href{https://boxtopsoft.com/}{BoxTop Software}}}{}{}{
-	\begin{itemize}
-   \item Modernizing \href{https://boxtopsoft.com/}{boxtopsoft.com} website from static pages to dynamic html
-	\item Utilizing \textbf{python flask} back-end with simple \textbf{javascript} and \textbf{jinja} front-end, hosted by \textbf{AWS}
+\cvsection{Projects}
+%\cvsubsection{Multi-line with longer description}
+\begin{cvtable}
+	\cvitem{Current}{Website Rewrite}{\href{http://boxtopsoft.com}{http://boxtopsoft.com}}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Modernizing a website from static pages to dynamic html.
+			\item \textbf{Python Flask} back-end with simple \textbf{JavaScript} and \textbf{Jinja} front-end
+			\item Hosted by \textbf{AWS}
+		\end{itemize}
 	%\item Hosted in \textbf{AWS}
- \end{itemize}
-}
-
-\cventry[0.7em]{Present}{Discord Bot}{\textsc{Personal}}{}{}{
-	\begin{itemize}
-   \item Simple discord bot that pulls from Bungie.net APIs
-   \item Lists online members, groups by party, and lists their current activity
-	\item Written in \textbf{javascript} and hosted by \textbf{AWS} - code on \href{https://github.com/mowzie/discordbots}{github.com/mowzie/discordbots}
-	%\item one more line
- \end{itemize}
-}
-
-%\cventry[0.7em]{Present}{Reinforcement Learning Project}{\textsc{Western Washington University}}{}{}{
-% \begin{itemize}
-%   \item Group project to use machine learning models to teach a rigid-body simulation in Unity
-%   \item Utilized \textbf{ml-agents} framework to tie Unity with \textbf{tensorflow}
-% \end{itemize}
-%}
-
-\cventry[0.7em]{2017}{Flight Planner}{\textsc{Western Washington University}}{}{}{
- \begin{itemize}
-   \item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
-   \item Allows CAP to easily create Garmin G1000 navigation files
-   \item Project information is stored at \href{https://github.com/CIOS-Digital/}{github.com/CIOS-Digital}
- \end{itemize}
-}
-
-
-
-%\cventry{2016}{MiniShell}{\textsc{Western Washington University}}{}{}{
-% \begin{itemize}
-%   \item Simple \textbf{\textsc{C}} shell for Unix as class project
-%   \item Handles pipes, redirection, command/variable expansion, and simple script reading
-% \end{itemize}
-%}
-%
-%\cventry[0.7em]{2015}{Emergency Vehicle Detection: Frequency Detection and Localization}{\textsc{Edmonds Community College}}{}{}{
-%	\begin{itemize}
-%   \item Experimental learning project
-%	\item Implemented a cross-correlation algorithm in \textbf{\textsc{C}} to determine frequencies of interest
-% \end{itemize}
-% }
-%
-%\cventry{2013-2015}{Recording Tool} {\textsc{Microsoft}}{}{}{
-% \begin{itemize}
-%   \item Designed, developed, documented, and maintained in-house \textbf{\csharp} recording tool
-%   \item Interfaces with Xbox 360, Xbox One, Win10 devices, and a LUA-controlled gantry robot
-% \end{itemize}
-% }
-
- %----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{Awards}
-
-%\cvitem{2015--present}{Washington State Opportunity Scholarship}
-
+	}
+	\\
+	\cvitem{Current}{Destiny Discord Bot}{Personal}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Simple Discord bot utilizing Bungie.net \textbf{APIs}
+			\item Lists online clan memembers, groups by fireteams, shows current activity
+			\item \textbf{JavaScript} and hosted by \textbf{AWS}
+			\item Source: \href{https://github.com/mowzie/destinyClanDiscordBot}{github.com/mowzie/destinyClanDiscordBot}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2017}{Flight Planner}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
+			\item Allows CAP to easily create Garmin G1000 navigation files
+			\item Source: \href{https://github.com/CIOS-Digital/}{github.com/CIOS-Digital}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2017}{Reinforcement Learning Project}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Group project to use machine learning models to teach a rigid-body simulation in Unity
+   			\item Utilized \href{https://github.com/Unity-Technologies/ml-agents}{\textbf{ML-Agents}} framework to tie Unity with \textbf{TensorFlow}
+		\end{itemize}
+		}
+		\\
+	\cvitem{2017}{Device Driver}{WWU}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item Device driver for an external audio interface
+			\item Written for both NetBSD (\textbf{C}) and Windows 10 (\textbf{C\texttt{++}})
+			\item Source:  \href{https://github.com/mowzie/dasDriver}{github.com/mowzie/dasDriver}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2010 -- 2015}{Recording Tool}{Microsoft}{
+		\begin{itemize}[noitemsep,labelsep=3pt, topsep=0pt, left=0pt]
+			\item \textbf{WPF} \textbf{\csharp} app to assist in manual and automated recordings
+			\item Controls a \textbf{LUA} gantry robot for audio playback while Win10 device is set to record
+		\end{itemize}
+	}
+\end{cvtable}
 
 \end{document}
