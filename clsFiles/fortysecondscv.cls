@@ -45,6 +45,7 @@
 \RequirePackage{ifthen}
 % enable simple math like +/- etc. on lengths
 \RequirePackage{calc}
+
 % change page margins
 \RequirePackage[
 	nohead,
@@ -318,7 +319,7 @@
 
 % social network item; \social{<icon>}{<url>}{<text>}
 \newcommand*{\social}[3]{%
-	\socialicon{#1} & \href{#2}{\textcolor{titletextcolor}{#3}}\\%
+	\socialicon{#1} & \censor{\href{#2}{\textcolor{titletextcolor}{#3}}}\\%
 }
 
 % personal information item; \personal{<icon>}{<text>}
@@ -338,17 +339,17 @@
 % NOTE: we use href instead of url so user can decide textformatting since url
 % automatically uses \texttt{} as format for the url
 \newcommand*{\cvbirthday}[1]{\cvcustomdata{\faUser}{#1}}
-\newcommand*{\cvaddress}[1]{\cvcustomdata{\faHome}{\textcolor{titletextcolor}{#1}}}
-\newcommand*{\cvphone}[1]{\cvcustomdata{\faPhone}{\textcolor{titletextcolor}{\href{tel:#1}{#1}}}}
+\newcommand*{\cvaddress}[1]{\cvcustomdata{\faHome}{\textcolor{titletextcolor}{\censor{#1}}}}
+\newcommand*{\cvphone}[1]{\cvcustomdata{\faPhone}{\textcolor{titletextcolor}{\censor{\href{tel:#1}{#1}}}}}
 \newcommand*{\cvsite}[1]{\cvcustomdata{\faGlobe}{\href{#1}{#1}}}
-\newcommand*{\cvmail}[1]{\cvcustomdata{\faEnvelope}{\textcolor{titletextcolor}{\href{mailto:#1}{#1}}}}
+\newcommand*{\cvmail}[1]{\cvcustomdata{\faEnvelope}{\textcolor{titletextcolor}{\censor{\href{mailto:#1}{#1}}}}}
 \newcommand*{\cvkey}[2]{\cvcustomdata{\faKey}{%
 	\href{https://keyserver.ubuntu.com/pks/lookup?search=#2\&op=vindex\&fingerprint=on}{#1}%
 }}
 
 % TODO find a cleaner solution for consistent spacing
 \newcommand{\nameandjob}{%
-	{\Huge\color{maincolor}\cvname}\par%
+	{\Huge\color{maincolor}\censor{\cvname}}\par%
 	\setlength{\parskip}{2ex}
 	{\Large\color{black!80}\cvjobtitle}\par%
 	\setlength{\parskip}{1ex}
@@ -725,7 +726,7 @@
 		\else%
 			\parbox[t]{\linewidth-\widthof{#3}-1em}{%
 			\raggedright \textbf{\textcolor{titletextcolor}{#2}}%
-			} \hfill \textcolor{titletextcolor}{#3} %
+			} \hfill \textcolor{titletextcolor}{\censor{#3}} %
 			\small{\textcolor{itemtextcolor}{#4}}\vspace{\parsep}%
 		\fi%
 	}\\
