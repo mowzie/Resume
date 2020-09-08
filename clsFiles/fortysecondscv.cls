@@ -661,7 +661,7 @@
 		% optionally insert logo picture after profile
 		\plotlogoafter
 
-		\vspace{-1pt}
+		\vspace{-3pt}
 
 		% name and job
 		\nameandjob
@@ -726,7 +726,7 @@
 			\parbox[t]{\linewidth-\widthof{#3}-1em}{%
 			\raggedright \textbf{\textcolor{titletextcolor}{#2}}%
 			} \hfill \textcolor{titletextcolor}{#3} %
-			\textcolor{itemtextcolor}{#4}%\vspace{\parsep}%
+			\small{\textcolor{itemtextcolor}{#4}}\vspace{\parsep}%
 		\fi%
 	}\\
 }
