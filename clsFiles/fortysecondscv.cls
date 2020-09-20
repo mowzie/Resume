@@ -260,7 +260,7 @@
 \newcommand*{\cvsection}[1]{\section*{#1}}
 \titleformat{\section}%
 	{\color{sectioncolor}\normalfont\bfseries\LARGE}{}{0pt}{}
-\titlespacing*{\section}{0pt}{1.5ex}{1ex}
+\titlespacing*{\section}{0pt}{1.4ex}{.5ex}
 
 % grey subsection style for right column
 \newcommand*{\cvsubsection}[1]{\subsection*{#1}}
@@ -270,7 +270,7 @@
 % abuse subsubsection as profilesection in left column
 \newcommand*{\profilesection}[1]{\subsubsection*{#1}}
 \titleformat{\subsubsection}
-	{\color{pseccolor}\normalfont\huge}{}{0pt}{\color{pseccolor}\sectionline}
+	{\color{pseccolor}\normalfont\Large}{}{0pt}{\color{pseccolor}\sectionline}
 % set spaces before and after profilesections: <left><before><after>
 % "starred version kills the indentation of the paragraph following the title"
 \titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
@@ -319,7 +319,7 @@
 
 % social network item; \social{<icon>}{<url>}{<text>}
 \newcommand*{\social}[3]{%
-	\socialicon{#1} & \censor{\href{#2}{\textcolor{titletextcolor}{#3}}}\\%
+	\socialicon{#1} & \censor{\href{#2}{\small{\textcolor{titletextcolor}{#3}}}}\\%
 }
 
 % personal information item; \personal{<icon>}{<text>}
@@ -477,7 +477,7 @@
 % \skill[<indent>]{<icon>}{<description>} creates in sidebar
 % | [indent] [icon]  some longer skill description  |
 \newcommand{\skill}[3][0em]{
-	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\textcolor{titletextcolor}{#3}} \hfill \par
+	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\small{\textcolor{titletextcolor}{#3}}} \hfill \par
 }
 
 % label for wheel charts
@@ -669,7 +669,7 @@
 
 		% personal information
 		\vspace*{0.5em}
-		\begin{icontable}[1.6]{1.7em}{0.4em}
+		\begin{icontable}[1.7]{1.7em}{0.4em}
 			\personaldata
 		\end{icontable}
 
@@ -680,9 +680,14 @@
 
 \newcommand{\makebacksidebar}{%
 	\begin{sidebar}
+		\vspace*{4em}
 		% begin with name instead of picture
 		\nameandjob
-
+		
+		\vspace*{0.5em}
+		\begin{icontable}[1.7]{1.7em}{0.4em}
+			\personaldata
+		\end{icontable}
 		% make sure there is no space at top, but after cvjob
 		\setlength{\parskip}{1ex}
 
