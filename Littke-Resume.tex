@@ -37,9 +37,9 @@
 	titletextcolor=arsenic,
 	%itemtextcolor=black!20,
 	%titletextcolor=black!40,
-	sidebarwidth=0.29\paperwidth,
-	topbottommargin=0.05\paperheight,
-	% leftrightmargin=20pt,
+	sidebarwidth=0.28\paperwidth,
+	topbottommargin=0.04\paperheight,
+	leftrightmargin=18pt,
 	% profilepicsize=4.5cm,
 	% profilepicborderwidth=3.5pt,
 	% profilepicstyle=profilecircle,
@@ -173,23 +173,27 @@
 
 	\profilesection{Languages}
 		\skill{\faWindows}{\csharp}
+		\skill{\faJava}{Java}
+		\skill{\faCuttlefish}{C}
 		\skill{\faJs}{JavaScript}
-	\skill{\faPython}{Python}
-	\skill{\faDatabase}{MYSQL}
+		\skill{\faPython}{Python}
+		\skill{\faDatabase}{MYSQL}
 
 	\profilesection{Frameworks}
 		\skill{\faJs}{ReactJS}
-		\skill{\faWindows}{MCV WebForms}
 		\skill{\faWindows}{WPF}
-		\skill{\faBezierCurve}{TensorFlow}
+		\skill{\faWindows}{MCV WebForms}
 
 	\profilesection{Other Interests}
 		\skill{\faMendeley}{Deep Learning}
 		\skill{\faLanguage}{NLP}
 		\skill{\faHeadphones}{Recording \& Mixing Music}
+		\skill{\faCampground}{Camping}
+		\skill{\faAnchor}{Sailing}
 
 	\profilesection{Soft Skills}
 		\skill{\faCodeBranch}{Adaptable \& Flexible}
+		\skill{\faMendeley}{Able to MultiTask}
 		\skill{\faCoffee}{Fast Learner}
 		\skill{\faHotjar}{Troubleshooting}
 		\skill{\faComment}{Friendly \& Empathetic}
@@ -212,10 +216,9 @@
 			\item Developed new features using \textbf{\csharp}, \textbf{React}, and \textbf{MVC WebForms}
 			\item Created new and updated old \textbf{RESTful} \textbf{API routes}
 			\item Worked in new and legacy codebases
-			\item Feature and unit tests in \textbf{NUnit}
+			\item Wrote feature and unit tests in \textbf{NUnit}
 		\end{itemize}
 	}
-
 	\cvitem{2010 -- 2015}{Software Test Engineer I, II, III}{Populus Group, LLC \textup{for} Microsoft}{
 		\begin{itemize}
 			\item Manual and automated testing for \censor{Xbox Kinect}
@@ -240,14 +243,14 @@
 \cvsection{Projects}
 %\cvsubsection{Multi-line with longer description}
 \begin{cvtable}
-	\cvitem{Current}{Website Rewrite}{\href{http://boxtopsoft.com}{http://boxtopsoft.com}}{
-		\begin{itemize}
-			\item Modernizing a website from static pages to dynamic html.
-			\item \textbf{Python Flask} back-end with simple \textbf{JavaScript} and \textbf{Jinja} front-end
-			\item Hosted by \textbf{AWS}
-		\end{itemize}
-	%\item Hosted in \textbf{AWS}
-	}
+	% \cvitem{Current}{Website Rewrite}{\href{http://boxtopsoft.com}{http://boxtopsoft.com}}{
+	% 	\begin{itemize}
+	% 		\item Modernizing a website from static pages to dynamic html.
+	% 		\item \textbf{Python Flask} back-end with simple \textbf{JavaScript} and \textbf{Jinja} front-end
+	% 		\item Hosted by \textbf{AWS}
+	% 	\end{itemize}
+	% %\item Hosted in \textbf{AWS}
+	% }
 	\\
 	\cvitem{Current}{Destiny Discord Bot}{Personal}{
 		\begin{itemize}
@@ -262,18 +265,27 @@
 		\begin{itemize}
 			\item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
 			\item Allows CAP to easily create Garmin G1000 navigation files
+			\item Currently under rewrite due to Google API changes
 			\item Source: \censor{\href{https://github.com/CIOS-Digital/}{github.com/CIOS-Digital}}
 		\end{itemize}
 	}
 	\\
 	\cvitem{2017}{Reinforcement Learning Project}{WWU}{
 		\begin{itemize}
-			\item Group project to use machine learning models to teach a rigid-body simulation in Unity
+			\item Group project using machine learning models to teach a rigid-body in \textbf{Unity}
    			\item Utilized \href{https://github.com/Unity-Technologies/ml-agents}{\textbf{ML-Agents}} framework to tie Unity with \textbf{TensorFlow}
 		\end{itemize}
 		}
 		\\
-	\cvitem{2017}{Device Driver}{WWU}{
+	\cvitem{2017}{TCP Chat App}{WWU}{
+		\begin{itemize}
+			\item Client and Server chat app written in \textbf{C} and using \textbf{curses}
+			\item Uses initializes socket creation and listening
+			\item Source:  \censor{\href{https://github.com/mowzie/tcpChat}{github.com/mowzie/tcpChat}}
+		\end{itemize}
+	}
+	\\
+	\cvitem{2017}{PCI-DAS08 Device Driver}{WWU}{
 		\begin{itemize}
 			\item Device driver for an external audio interface
 			\item Written for both NetBSD (\textbf{C}) and Windows 10 (\textbf{C\texttt{++}})
@@ -284,9 +296,8 @@
 	\cvitem{2010 -- 2015}{Recording Tool}{Microsoft}{
 		\begin{itemize}
 			\item \textbf{WPF} \textbf{\csharp} app to assist in manual and automated recordings
-			\item Controls a \textbf{LUA} gantry robot for audio playback while Win10 device is set to record
+			\item Controls a \textbf{LUA} gantry robot for audio playback while recording on Win10
 		\end{itemize}
 	}
 \end{cvtable}
-
 \end{document}
