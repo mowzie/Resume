@@ -27,19 +27,20 @@
 \documentclass[
 	letterpaper,
 	% a4paper,
-	% showframes,
-	% vline=2.2em,
+	%showframes,
+	 %vline=20pt,
 	% maincolor=cvgreen,
-	% sidecolor=gray!50,
+%	 sidecolor=gray!50,
 	% sectioncolor=red,
-	% subsectioncolor=orange,
+	 subsectioncolor=orange,
+	%sidetextcolor=arsenic,
 	itemtextcolor=charcoal,
 	titletextcolor=arsenic,
 	%itemtextcolor=black!20,
 	%titletextcolor=black!40,
 	sidebarwidth=0.28\paperwidth,
-	topbottommargin=0.04\paperheight,
-	leftrightmargin=18pt,
+	topbottommargin=0.03\paperheight,
+	leftrightmargin=20pt,
 	% profilepicsize=4.5cm,
 	% profilepicborderwidth=3.5pt,
 	% profilepicstyle=profilecircle,
@@ -55,42 +56,6 @@
 \usepackage{clsFiles/censor}
 \StopCensoring
 
-% fine tune line spacing
-% \usepackage{setspace}
-% \setstretch{1.1}
-
-% improve word spacing and hyphenation
-\usepackage{microtype}
-\usepackage{ragged2e}
-\usepackage{clsFiles/censor}
-
-% uncomment in case you don't want any hyphenation
- \usepackage[none]{hyphenat}
-
-% take care of proper font encoding
-\ifxetexorluatex
-	\usepackage{fontspec}
-	\defaultfontfeatures{Ligatures=TeX}
-	% \newfontfamily\headingfont[Path=fonts/]{segoeuib.ttf} % use local font
-\else
-	\usepackage[utf8]{inputenc}
-	\usepackage[T1]{fontenc}
-\fi
-
-% use a sans serif font as default
-\usepackage[sfdefault]{ClearSans}
- %\usepackage[sfdefault]{noto}
-
-% multi-language CV XeLaTeX and polyglossia (should also work with LuaLaTeX)
-% NOTE: breaks \pointskill, \membership and some spacings
-% \ifxetexorluatex
-% 	\usepackage{polyglossia}
-% 	\newfontfamily\arabicfontsf[Script=Arabic,Scale=1.5]{Amiri}
-% 	\newfontfamily\englishfontsf{Clear Sans}
-% 	\setmainfont{Amiri}
-% 	\setdefaultlanguage{arabic}
-% 	\setotherlanguage{english}
-% \fi
 
 % enable mathematical syntax for some symbols like \varnothing
 \usepackage{amssymb}

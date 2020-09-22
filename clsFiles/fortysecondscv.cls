@@ -68,12 +68,14 @@
 \colorlet{sectioncolor}{cvsectioncolor}
 \colorlet{subsectioncolor}{cvsubsectioncolor}
 \colorlet{subsectioncolor}{black!20}
+\colorlet{sidetextcolor}{black}
 \colorlet{itemtextcolor}{black!90}
 \colorlet{titletextcolor}{arsenic}
 % colors for document body (right column)
 % let user define main color
 \DeclareOptionX{maincolor}{\colorlet{maincolor}{#1}}
 \DeclareOptionX{sidecolor}{\colorlet{sidecolor}{#1}}
+\DeclareOptionX{sidetextcolor}{\colorlet{sidetextcolor}{#1}}
 \DeclareOptionX{sectioncolor}{\colorlet{sectioncolor}{#1}}
 \DeclareOptionX{subsectioncolor}{\colorlet{subsectioncolor}{#1}}
 \DeclareOptionX{itemtextcolor}{\colorlet{itemtextcolor}{#1}}
@@ -156,7 +158,7 @@
 
 % compute "inner" margin of sidebar automatically;
 % must come after \sidebarwidth and \leftrightmargin possibly changed by user
-\setlength{\sidebartextwidth}{\sidebarwidth - 2\leftrightmargin}
+\setlength{\sidebartextwidth}{\sidebarwidth - \leftrightmargin}
 
 % let geometry package perform the changes;
 % must come after loading the base class to prevent overwriting
@@ -171,7 +173,7 @@
 	\geometry{
 		top=\topbottommargin,
 		bottom=\topbottommargin,
-		left=\sidebarwidth + \leftrightmargin,
+		left=\sidebarwidth + 1em,
 		right=\leftrightmargin,
 	}
 }
@@ -238,7 +240,26 @@
 % color of unfilled skill points / bar / chart label
 \colorlet{skillbg}{black!25}
 
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
 
+% uncomment in case you don't want any hyphenation
+ \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+\ifxetexorluatex
+	\usepackage{fontspec}
+	\defaultfontfeatures{Ligatures=TeX}
+	% \newfontfamily\headingfont[Path=fonts/]{segoeuib.ttf} % use local font
+\else
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+\fi
+
+% use a sans serif font as default
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
 %-------------------------------------------------------------------------------
 %                      GLOBAL LAYOUT AND HEADINGS STYLE
 %-------------------------------------------------------------------------------
@@ -253,7 +274,7 @@
 
 % creates a rule after some text using remaining line width
 % usage: \xrfill[<raise>]{<width>}
-\newcommand*{\sectionline}[1]{#1~\xrfill[.5ex]{1pt}[pseccolor]}
+\newcommand*{\sectionline}[1]{#1~\xrfill[.5ex]{0pt}[pseccolor]}
 
 % section style for cv table headings in right column
 % \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before>}[<after>]
@@ -273,7 +294,7 @@
 	{\color{pseccolor}\normalfont\Large}{}{0pt}{\color{pseccolor}\sectionline}
 % set spaces before and after profilesections: <left><before><after>
 % "starred version kills the indentation of the paragraph following the title"
-\titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{2ex}{-1ex}
 
 
 %-------------------------------------------------------------------------------
@@ -319,12 +340,12 @@
 
 % social network item; \social{<icon>}{<url>}{<text>}
 \newcommand*{\social}[3]{%
-	\socialicon{#1} & \censor{\href{#2}{\small{\textcolor{titletextcolor}{#3}}}}\\%
+	\socialicon{#1} & \censor{\href{#2}{\small{\textcolor{sidetextcolor}{#3}}}}\\%
 }
 
 % personal information item; \personal{<icon>}{<text>}
 \newcommand*{\personal}[2]{%
-	\circleicon{#1} & {#2}\\%
+	\socialicon{#1} & \textcolor{sidetextcolor}{#2}\\%
 }
 
 % other personal information as macro that can be used later. Usage:
@@ -339,10 +360,10 @@
 % NOTE: we use href instead of url so user can decide textformatting since url
 % automatically uses \texttt{} as format for the url
 \newcommand*{\cvbirthday}[1]{\cvcustomdata{\faUser}{#1}}
-\newcommand*{\cvaddress}[1]{\cvcustomdata{\faHome}{\textcolor{titletextcolor}{\censor{#1}}}}
-\newcommand*{\cvphone}[1]{\cvcustomdata{\faPhone}{\textcolor{titletextcolor}{\censor{\href{tel:#1}{#1}}}}}
+\newcommand*{\cvaddress}[1]{\cvcustomdata{\faEnvelope}{\censor{#1}}}
+\newcommand*{\cvphone}[1]{\cvcustomdata{\faPhone}{\censor{\href{tel:#1}{#1}}}}
 \newcommand*{\cvsite}[1]{\cvcustomdata{\faGlobe}{\href{#1}{#1}}}
-\newcommand*{\cvmail}[1]{\cvcustomdata{\faEnvelope}{\textcolor{titletextcolor}{\censor{\href{mailto:#1}{#1}}}}}
+\newcommand*{\cvmail}[1]{\cvcustomdata{\faAt}{\censor{\href{mailto:#1}{#1}}}}
 \newcommand*{\cvkey}[2]{\cvcustomdata{\faKey}{%
 	\href{https://keyserver.ubuntu.com/pks/lookup?search=#2\&op=vindex\&fingerprint=on}{#1}%
 }}
@@ -445,7 +466,7 @@
 \newcommand{\aboutme}[1]{\parbox[b]{\linewidth}{#1}}
 
 % uniform icon style for all skill icons, e.g. flags or fontawesome icons
-\newcommand{\cvicon}[1]{\makebox[1em]{\color{iconcolor} #1}}
+\newcommand{\cvicon}[1]{\makebox[1.5em]{\color{iconcolor} #1}}
 \newcommand{\flag}[1]{\includegraphics[align=c, width=1em]{#1}}
 
 % \pointskill[<indent>]{<icon>}{<description>}{<points>}[<maxpoints>] creates
@@ -476,8 +497,8 @@
 
 % \skill[<indent>]{<icon>}{<description>} creates in sidebar
 % | [indent] [icon]  some longer skill description  |
-\newcommand{\skill}[3][0em]{
-	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\small{\textcolor{titletextcolor}{#3}}} \hfill \par
+\newcommand{\skill}[2]{%
+	 \cvicon{#1} & {\small{\textcolor{sidetextcolor}{#2}}}\\%
 }
 
 % label for wheel charts
@@ -669,7 +690,7 @@
 
 		% personal information
 		\vspace*{0.5em}
-		\begin{icontable}[1.7]{1.7em}{0.4em}
+		\begin{icontable}{1.5em}{0.5em}
 			\personaldata
 		\end{icontable}
 
@@ -754,11 +775,17 @@
   \hypersetup{
     baseurl       = https://,
 	pdfstartpage  = 1,
-	colorlinks=false,
+	colorlinks=false,% hyperlinks will be black
+	urlcolor=purple,% hyperlink borders will be red
+	filecolor=red,
+	citecolor=red,
 	pdfborderstyle={/S/U/W 1},
+	urlbordercolor=subsectioncolor,
     pdfcreator    = {\LaTeX{} with 'fortysecondscv' package},
 %    pdfproducer   = {\LaTeX{}},% will/should be set automatically to the correct TeX engine used
-    bookmarksopen = true,
+	bookmarksopen = true,
+	pdffitwindow=true,
+	pdfnewwindow=true,
     bookmarksdepth= 2,% to show sections and subsections
     pdfauthor     = {\cvname},
     pdftitle      = {\cvname -- resum\'{e}},
