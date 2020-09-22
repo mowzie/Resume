@@ -92,8 +92,9 @@ Written in **JavaScript** and hosted by **AWS**.
 
 Group final project, comissioned by the Whatcom Civil Air Patrol.  
 Written in **C#** using **WPF**.  
-Allows CAP to easily create Garmin G1000 waypoint navigation files.
-* [link](https://github.com/CIOS-Digital)
+Allows CAP to easily create Garmin G1000 waypoint navigation files.  
+Code is currently under rewrite due to changes in Google API
+* [link](https://github.com/CIOS-Digital/flight-planning/tree/dev)
 
 **DAS Device Driver**  
 ![usage](media/dasUsage.gif)
