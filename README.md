@@ -76,11 +76,10 @@ Projects of Interest
 Side project to modernize ecommerce website.
 Backend written using **python flask** with frontend utilizing **Jinja** templates.
 Project is still in progress.  
-*No source available*
-* [link](http://boxtopsoft.com/)
+* *No source available*
 
 **Destiny Clan Checker**  
-![usage](media\discordUsage.gif)
+![usage](media/discordUsage.gif)
 
 Simple Discord bot utilizing Bungie.net APIs.  
 Lists online clan memembers, groups by fireteams, shows current activity.  
@@ -89,7 +88,7 @@ Written in **JavaScript** and hosted by **AWS**.
 
 
 **Flight Planner**  
-![usage](media\flightUsage.gif)
+![usage](media/flightUsage.gif)
 
 Group final project, comissioned by the Whatcom Civil Air Patrol.  
 Written in **C#** using **WPF**.  
@@ -97,7 +96,7 @@ Allows CAP to easily create Garmin G1000 waypoint navigation files.
 * [link](https://github.com/CIOS-Digital)
 
 **DAS Device Driver**  
-![usage](media\dasUsage.gif)
+![usage](media/dasUsage.gif)
 
 Device driver for an external audio interface  
 Written for both NetBSD (C) and Windows 10 (C++)  
@@ -113,15 +112,15 @@ Added Curses to display a nice UI and remove need for running 2nd app for output
 A simple shell for **Unix** written in **C**.  
 Handles pipes, redirections, command/variable expansion, and simple script reading (if, while).  
 Written for class at WWU.
-* Source is in a private repo as the project is still in use for the class
+* *Source available on request*
 
 **Recording Tool**  
 Tool written in **C#** to facilitate in manual and automated data collection.  
 Connects to Xbox 360, Xbox One, Win-Mobile, and Win10 devices to initiate playback & recording of audio.  
 Also controls a gantry robot through **Lua** to move the robot-controlled loudspeaker around the room at pre-coordinated positions.  
 Utilized internal tools for all connections.  
-Written for Microsoft.
-* No source available
+Written for Microsoft.  
+* *No source available*
 
 **Vechicle Finder**  
 Proof-of-concept class project to test if we can detect the location of emergency vehicles based on recording their sirens.  
