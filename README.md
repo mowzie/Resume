@@ -19,14 +19,14 @@ Education
 *2007-2009*  
    **AA, Audio Production**: Art Institute of Seattle (Seattle, WA)
 
-Experience
+Work Experience (non gap)
 ----------
 *<datetime> 2018-2020 <datetime>*  
 **Faithlife** - Software Developer: Faithlife
 * Developed new web features using **C#** and **React** and **MVC WebForms**
 * Created and maintained new **RESTful API routes** as well as updating old routes
 * Incorporated new tests in **NUnit** as API routes were created/updated
-* Refactored legacy code for internal tools to use API routes
+* Refactored legacy code for internal tools to use API routes instead of direct database calls
 * Performed updates and speedups for several pages - such as decreasing a page load time by 20x by selectivly fetching data through API
 
 *<datetime> 2016-2018 <datetime>*  
@@ -34,7 +34,7 @@ Experience
 * Responsible for preparing quality recordings for student recitals and performances
 
 *<datetime> 2016 <datetime>*  
-**Western Washington University** - Barista
+**Western Washington University** - Barista (Tony's & Starbucks)
 * Great customer service while bonding with customers and coworkers
 * Accurate cash handling and drink creating
 
@@ -52,10 +52,16 @@ Software/Hardware test engineer for Xbox One and Kinect
 * Created application to run/collected automated data
 
 *<datetime> 2010-2012 <datetime>*  
-**Populus Group, LLC for Microsoft** STEI  
+**Populus Group, LLC for Microsoft** - STEI  
 Software/Hardware test engineer for Xbox 360 Kinect
 * Bi-Monthly SDK validation testing
 * Created and ran both manual and automated tests and data collection
+
+*<datetime> 2009 <datetime>*  
+**Clatter & Din** - Client Relations Intern
+* Ensured studios were clean and arranged before/after sessions
+* Assisted engineers in ISDN patching with clients
+* Collected and delivered lunch orders for clients
 
 *<datetime> 2008-2010 <datetime>*  
 **Starbucks** - Barista
@@ -63,12 +69,6 @@ Software/Hardware test engineer for Xbox 360 Kinect
 * Enrolled in the *Coffee Master* program (before it became defunct)
 * Provided assistance to customers in effective and efficient manner
 * Accurate cash handling and superb drink making
-
-*<datetime> 2009 <datetime>*  
-**Clatter & Din** - Client Relations Intern
-* Ensured studios were clean and arranged before/after sessions
-* Assisted engineers in ISDN patching with clients
-* Collected and delivered lunch orders for clients
 
 Projects of Interest
 --------------------
@@ -80,21 +80,34 @@ Project is still in progress.
 * [link](http://boxtopsoft.com/)
 
 **Destiny Clan Checker**  
+![usage](media\discordUsage.gif)
+
 Simple Discord bot utilizing Bungie.net APIs.  
 Lists online clan memembers, groups by fireteams, shows current activity.  
 Written in **JavaScript** and hosted by **AWS**.
 * [link](https://github.com/mowzie/destinyClanDiscordBot)
 
+
 **Flight Planner**  
+![usage](media\flightUsage.gif)
+
 Group final project, comissioned by the Whatcom Civil Air Patrol.  
 Written in **C#** using **WPF**.  
 Allows CAP to easily create Garmin G1000 waypoint navigation files.
 * [link](https://github.com/CIOS-Digital)
 
 **DAS Device Driver**  
+![usage](media\dasUsage.gif)
+
 Device driver for an external audio interface  
 Written for both NetBSD (C) and Windows 10 (C++)  
 * [link](https://github.com/mowzie/dasDriver)
+
+**TCP Chat**  
+Simple chat app written in **C**  
+Extension to final project at university  
+Added Curses to display a nice UI and remove need for running 2nd app for output  
+* [link](https://github.com/mowzie/tcpchat)
 
 **Minishell**  
 A simple shell for **Unix** written in **C**.  
