@@ -258,8 +258,9 @@
 \fi
 
 % use a sans serif font as default
-\usepackage[T1]{fontenc}
-\usepackage[default]{raleway}
+ \usepackage[T1]{fontenc}
+ \usepackage[default]{raleway}
+%\usepackage[sfdefault]{ClearSans}
 %-------------------------------------------------------------------------------
 %                      GLOBAL LAYOUT AND HEADINGS STYLE
 %-------------------------------------------------------------------------------
