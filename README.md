@@ -21,9 +21,16 @@ Education
 
 Work Experience (non gap)
 ----------
+*<datetime> 2020-Present <datetime>*  
+**EASi for Microsoft** - Software Development Engineer in Test II
+* Run NVMe SSD qualification tests for the Microsoft Surface Storage team for units in various levels of production
+* Update and maintain **C#** and **Powershell** test code
+* Found new ways to chain tests together to reduce overall test time
+* Create **C#** and **Powershell** parsing tools to facilitate copying off results
+
 *<datetime> 2018-2020 <datetime>*  
 **Faithlife** - Software Developer: Faithlife
-* Developed new web features using **C#** and **React** and **MVC WebForms**
+* Developed new web features using **C#** and **React** and **WebForms**
 * Created and maintained new **RESTful API routes** as well as updating old routes
 * Incorporated new tests in **NUnit** as API routes were created/updated
 * Refactored legacy code for internal tools to use API routes instead of direct database calls
@@ -127,9 +134,3 @@ Written for Microsoft.
 Proof-of-concept class project to test if we can detect the location of emergency vehicles based on recording their sirens.  
  **note:** first major project that I started, so code is not pretty.  
  * [link](https://github.com/mowzie/vehiclefinder)
-
-
-**fft**  
-Simple application that reads in an audio file (in wav format) and outputs the fft amplitudes as well as generating a gnuplot script to plot the fft.  
-Written using **C** utilizing the **fftw** library.
-*  [link](https://github.com/mowzie/fft)
