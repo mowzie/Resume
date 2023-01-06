@@ -109,7 +109,7 @@
 % your name
 \cvname{Ian Littke}
 % job title/career
-\cvjobtitle{Software Developer}
+\cvjobtitle{Software Developer\\ Engineer in Test}
 
 %% optional information
 % profile picture
@@ -120,7 +120,7 @@
 % date of birth
 %\cvbirthday{\today}
 % short address/location, use \newline if more than 1 line is required
-\cvaddress{Bellingham, Washington}
+\cvaddress{Mt Vernon, Washington}
 % phone number
 \cvphone{(206) 659-6106}
 % personal website
@@ -166,14 +166,13 @@
 
 	\profilesection{Frameworks}
 		\begin{icontable}{1.5em}{0.5em}
-			\skill{\faReact}{ReactJS}
+			%\skill{\faReact}{ReactJS}
 			\skill{\faWindows}{WPF}
 			\skill{\faWindows}{MCV WebForms}
 		\end{icontable}
 
 	\profilesection{Other Interests}
 		\begin{icontable}{1.5em}{0.5em}
-			\skill{\faMendeley}{Deep Learning}
 			\skill{\faLanguage}{NLP}
 			\skill{\faHeadphones}{Recording \& Mixing Music}
 			\skill{\faCampground}{Camping}
@@ -202,20 +201,28 @@
 \renewcommand{\labelitemii}{\small\textbullet}
 \cvsection{Work Experience}
 \begin{cvtable}[1]
-	\cvitem{2020-Present}{Software Development Engineer in Test II}{EASi for Microsoft}{
+	\cvitem{2020-Present}{Software Development Engineer in Test II}{EASi/Tech Mahindra for Microsoft}{
 		\begin{itemize}
-			\item Run NVMe SSD qualification tests for \censor{Surface Storage} team
-			\item Update and maintain \textbf{\csharp} and \textbf{Powershell} test code
-			\item Found new ways to chain tests together to reduce overall test time
-			\item Create \textbf{\csharp} and \textbf{Powershell} parsing tools to facilitate copying off results
+			\item Ran NVMe SSD qualification tests for \censor{Surface Storage} team
+			\item Updated and maintain \textbf{\csharp} and \textbf{Powershell} test code as well as documentation
+			\item Improved testing automation, reducing qualification test time from 4 to 2.5 weeks
+			\item Created \textbf{\csharp} and \textbf{Powershell} tools to facilitate test result compilation
+			\begin{itemize}
+				\item Implemented a parsing tool to autocreate \textbf{Excel pivot chart} to expidite performance comparisons
+				\item Added in drive health logging between cycles in existing test tool
+				\item Created automation wrappers for several manual tests
+			\end{itemize}
 		\end{itemize}
 	}
 	\cvitem{2018-2020}{Software Developer}{Faithlife}{
 		\begin{itemize}
 			\item Developed new features using \textbf{\csharp}, \textbf{React}, and \textbf{WebForms}
+			\begin{itemize}
+				\item Created new modals for 
+			\end{itemize}
 			\item Created new and updated old \textbf{RESTful} \textbf{API routes}
-			\item Worked in new and legacy codebases
-			\item Wrote new features and unit tests in \textbf{NUnit}
+			\item \textbf{Refactored} API codebase for speed improvements and seperation from legacy "ball of mud"
+			\item Wrote new features and unit tests in \textbf{NUnit} and \textbf{Cypress}
 		\end{itemize}
 	}
 	\cvitem{2010 -- 2015}{Software Test Engineer I, II, III}{Populus Group, LLC \textup{for} Microsoft}{
@@ -223,9 +230,9 @@
 			\item Manual and automated testing for \censor{Xbox Kinect}
 			\item Headed data-collection effort for speech recognition training/testing
 			\item Created in-house \textbf{\csharp} recording tool used by team
-			\item Rewrote nightly tests in \textbf{\csharp}
+			\item Rewrote nightly tests from batch script to \textbf{\csharp}, reducing runtime and tripling data
 			\begin{itemize}[nosep, left=2pt]
-			\item Documented results in a \textbf{\footnotesize{.NET}} webpage with \textbf{Excel Pivot Tables}
+				\item Documented results in a \textbf{\footnotesize{.NET}} webpage with \textbf{Excel Pivot Tables}
 			\end{itemize}
 		\end{itemize}
 	}
@@ -252,14 +259,14 @@
 	% %\item Hosted in \textbf{AWS}
 	% }
 	\\
-	\cvitem{2020}{Destiny Discord Bot}{Personal}{
-		\begin{itemize}
-			\item Simple Discord bot utilizing Bungie.net \textbf{APIs}
-			\item Lists online clan memembers, groups by fireteams, shows current activity
-			\item Source: \censor{\href{https://github.com/mowzie/destinyClanDiscordBot}{github.com/mowzie/destinyClanDiscordBot}}
-		\end{itemize}
-	}
-	\\
+	% \cvitem{2020}{Destiny Discord Bot}{Personal}{
+	% 	\begin{itemize}
+	% 		\item Simple Discord bot utilizing Bungie.net \textbf{APIs}
+	% 		\item Lists online clan memembers, groups by fireteams, shows current activity
+	% 		\item Source: \censor{\href{https://github.com/mowzie/destinyClanDiscordBot}{github.com/mowzie/destinyClanDiscordBot}}
+	% 	\end{itemize}
+	% }
+	% \\
 	\cvitem{2017}{Flight Planner}{WWU}{
 		\begin{itemize}
 			\item Group project for the Whatcom Civil Air Patrol (CAP), written in \textbf{\csharp}
@@ -276,14 +283,14 @@
 	% 	\end{itemize}
 	% 	}
 	%	\\
-	 \cvitem{2017}{TCP Chat App}{WWU}{
-	 	\begin{itemize}
-	 		\item Client and Server chat app written in \textbf{C} and using \textbf{curses}
-	 		\item Uses initializes socket creation and listening
-	 		\item Source:  \censor{\href{https://github.com/mowzie/tcpChat}{github.com/mowzie/tcpChat}}
-	 	\end{itemize}
-	}
-	\\
+	%  \cvitem{2017}{TCP Chat App}{WWU}{
+	%  	\begin{itemize}
+	%  		\item Client and Server chat app written in \textbf{C} and using \textbf{curses}
+	%  		\item Uses initializes socket creation and listening
+	%  		\item Source:  \censor{\href{https://github.com/mowzie/tcpChat}{github.com/mowzie/tcpChat}}
+	%  	\end{itemize}
+	% }
+	% \\
 	\cvitem{2017}{PCI-DAS08 Device Driver}{WWU}{
 		\begin{itemize}
 			\item Device driver for an external audio interface
@@ -295,7 +302,7 @@
 	\cvitem{2010 -- 2015}{Recording Tool}{Microsoft}{
 		\begin{itemize}
 			\item \textbf{WPF} \textbf{\csharp} app to assist in manual and automated recordings
-			\item Controls a \textbf{LUA} gantry robot for audio playback while recording on Win10
+			\item Controls a \textbf{LUA} gantry robot for audio playback while recording on Xbox, Mobile, and laptops
 		\end{itemize}
 	}
 \end{cvtable}
